@@ -6,13 +6,35 @@
 
     <groupId>io.zentae.snake</groupId>
     <artifactId>renderer</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.0-SNAPSHOT</version>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
+    <repositories>
+        <repository>
+            <id>erarealms-snapshots</id>
+            <url>https://nexus.erarealms.fr/repository/maven-snapshots/</url>
+        </repository>
+        <repository>
+            <id>erarealms-releases</id>
+            <url>https://nexus.erarealms.fr/repository/maven-releases/</url>
+        </repository>
+    </repositories>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>erarealms-snapshots</id>
+            <url>https://nexus.erarealms.fr/repository/maven-snapshots/</url>
+        </snapshotRepository>
+        <repository>
+            <id>erarealms-releases</id>
+            <url>https://nexus.erarealms.fr/repository/maven-releases/</url>
+        </repository>
+    </distributionManagement>
 
     <build>
         <plugins>
@@ -47,9 +69,8 @@
         <dependency>
             <groupId>io.zentae.snake</groupId>
             <artifactId>engine</artifactId>
-            <version>1.0.0</version>
-            <scope>system</scope>
-            <systemPath>${basedir}/lib/engine-1.0.0.jar</systemPath>
+            <version>1.0.0-SNAPSHOT</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 

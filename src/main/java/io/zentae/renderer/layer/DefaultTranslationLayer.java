@@ -57,9 +57,6 @@ public class DefaultTranslationLayer extends TranslationLayer {
                 if(snake.getHead().equals(segment)) {
                     render.put(new Location(segment.getX() * getTileSize(), segment.getY() * getTileSize()),
                             'H');
-                } else if(snake.getTail().equals(segment)) {
-                    render.put(new Location(segment.getX() * getTileSize(), segment.getY() * getTileSize()),
-                            'T');
                 } else {
                     render.put(new Location(segment.getX() * getTileSize(), segment.getY() * getTileSize()),
                             character);
