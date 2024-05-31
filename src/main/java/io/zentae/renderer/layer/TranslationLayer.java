@@ -11,9 +11,9 @@ public abstract class TranslationLayer {
     // the tile size.
     private final int tileSize;
     // the character map.
-    private final Map<Class<?>, Character> characterMap;
+    private final Map<Class<?>, String> characterMap;
 
-    public TranslationLayer(int tileSize, Map<Class<?>, Character> characterMap) {
+    public TranslationLayer(int tileSize, Map<Class<?>, String> characterMap) {
         this.tileSize = tileSize;
         this.characterMap = characterMap;
     }
@@ -23,10 +23,10 @@ public abstract class TranslationLayer {
     }
 
     @Nonnull
-    protected Map<Class<?>, Character> getCharacterMap() {
+    protected Map<Class<?>, String> getCharacterMap() {
         return this.characterMap;
     }
 
     @Nonnull
-    public abstract Map<Location, Character> translate(Arena arena);
+    public abstract Map<Location, String> translate(Arena arena);
 }
